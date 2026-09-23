@@ -13,7 +13,7 @@ resource "azurerm_subnet_network_security_group_association" "web_nsg_associatio
   subnet_id                 = azurerm_subnet.web-subnet.id
   network_security_group_id = azurerm_network_security_group.web_nsg.id
 }
-
+#if i call local.web_nsg_rule is name
 locals {
   web_nsg_rule = { #web nsg rule is the name 
     "110" : "22",  #expression in key value format key priority value is port number
